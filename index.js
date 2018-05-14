@@ -13,8 +13,21 @@ const changeHeader = () => {
 	element.innerHTML = "Goodbye spinner, Hello text!";
 }
 
-setTimeout(function() {
-	hideSpinner();
-	changeHeader();
-	displayText();
-}, 3000);
+const updateTime = (k) => {
+	if(k < 1) {
+		clearInterval(interval);
+		hideSpinner();
+		changeHeader();
+ 		displayText();
+	}
+	element = document.getElementById("time");
+	element.innerHTML = k;
+}
+
+k = 3;
+updateTime(k);
+
+const interval = setInterval(() => {
+	k--;
+	updateTime(k);
+}, 1000);
