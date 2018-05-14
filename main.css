@@ -7,11 +7,15 @@
 	text-align: center;
 }
 
+#text {
+	display:none;
+}
+
 .spinner:before {
 	content: "";
 	box-sizing: border-box;
 	position: absolute;
-	top: 50%;
+	top: 12%;
 	left: 50%;
 	height: 60px;
 	width: 60px;
